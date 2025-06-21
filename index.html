@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShopEase - Responsive E-Commerce</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav class="navbar">
+            <a href="#" class="logo">
+                <i class="fas fa-shopping-bag"></i> ShopEase
+            </a>
+            <div class="search-bar">
+                <input type="text" placeholder="Search products...">
+                <i class="fas fa-search"></i>
+            </div>
+            <div class="nav-icons">
+                <div class="nav-icon" id="wishlist-btn">
+                    <i class="far fa-heart"></i>
+                </div>
+                <div class="nav-icon" id="cart-btn">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count">0</span>
+                </div>
+                <div class="nav-icon" id="user-btn">
+                    <i class="far fa-user"></i>
+                </div>
+                <button class="mobile-menu-btn" id="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobile-menu">
+        <div class="menu-header">
+            <h3>Menu</h3>
+            <button class="close-menu" id="close-menu">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Shop</a></li>
+            <li><a href="#">Categories</a></li>
+            <li><a href="#">Account</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Discover Amazing Products</h1>
+            <p>Shop the latest trends with exclusive discounts</p>
+            <div class="hero-btns">
+                <a href="#" class="btn btn-primary">SHOP NOW</a>
+                <a href="#" class="btn btn-outline">LEARN MORE</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="container">
+        <!-- Filters -->
+        <div class="filters">
+            <div class="filter-group">
+                <button class="filter-btn active">All</button>
+                <button class="filter-btn">Electronics</button>
+                <button class="filter-btn">Clothing</button>
+                <button class="filter-btn">Home</button>
+            </div>
+            <select class="sort-select">
+                <option>Sort by: Featured</option>
+                <option>Price: Low to High</option>
+                <option>Price: High to Low</option>
+                <option>Rating</option>
+            </select>
+        </div>
+
+        <!-- Products Grid -->
+        <h2 class="products-title">Featured Products</h2>
+        <div class="products-grid" id="products-grid">
+            <!-- Products will be inserted here by JavaScript -->
+        </div>
+    </main>
+
+    <!-- Cart Sidebar -->
+    <div class="cart-sidebar" id="cart-sidebar">
+        <div class="cart-header">
+            <h3 class="cart-title">Your Cart (<span id="cart-total-count">0</span>)</h3>
+            <button class="close-cart" id="close-cart">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="cart-items" id="cart-items">
+            <!-- Cart items will be inserted here by JavaScript -->
+        </div>
+        <div class="cart-footer">
+            <div class="cart-subtotal">
+                <span>Subtotal:</span>
+                <span id="cart-subtotal">$0.00</span>
+            </div>
+            <button class="checkout-btn">PROCEED TO CHECKOUT</button>
+        </div>
+    </div>
+
+    <!-- Overlay -->
+    <div class="overlay" id="overlay"></div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-col">
+                <a href="#" class="footer-logo">
+                    <i class="fas fa-shopping-bag"></i> ShopEase
+                </a>
+                <p class="footer-text">
+                    Your one-stop shop for all your needs. Quality products at affordable prices.
+                </p>
+                <div class="footer-social">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-pinterest"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h3 class="footer-heading">Quick Links</h3>
+                <ul class="footer-links">
+                    <li class="footer-link"><a href="#">Home</a></li>
+                    <li class="footer-link"><a href="#">About Us</a></li>
+                    <li class="footer-link"><a href="#">Products</a></li>
+                    <li class="footer-link"><a href="#">Contact</a></li>
+                    <li class="footer-link"><a href="#">FAQ</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3 class="footer-heading">Customer Service</h3>
+                <ul class="footer-links">
+                    <li class="footer-link"><a href="#">My Account</a></li>
+                    <li class="footer-link"><a href="#">Order Tracking</a></li>
+                    <li class="footer-link"><a href="#">Wishlist</a></li>
+                    <li class="footer-link"><a href="#">Shipping Policy</a></li>
+                    <li class="footer-link"><a href="#">Returns</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3 class="footer-heading">Contact Info</h3>
+                <div class="footer-contact">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>123 Main Street, City, Country</span>
+                </div>
+                <div class="footer-contact">
+                    <i class="fas fa-phone-alt"></i>
+                    <span>+1 (555) 123-4567</span>
+                </div>
+                <div class="footer-contact">
+                    <i class="fas fa-envelope"></i>
+                    <span>info@shopease.com</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
